@@ -1,0 +1,30 @@
+﻿<Window x:Class="ADBTool.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ADBTool"
+        mc:Ignorable="d"
+        Title="ADBTool" Height="450" Width="349" MinWidth="300" MinHeight="320" Loaded="Window_Loaded" Closing="Window_Closing" ResizeMode="CanResizeWithGrip">
+    <Grid Background="#FFF0F0F0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="7*"/>
+        </Grid.ColumnDefinitions>
+        <ListBox x:Name="listBoxOutputLog" Margin="10,120,10,105" Grid.ColumnSpan="2"/>
+        <Button x:Name="buttonInstall" Content="Install" Margin="10,0,5,24" VerticalAlignment="Bottom" Height="49" Click="buttonInstall_Click"/>
+        <Label x:Name="labelPath" Content="Select an application before continuing.." Margin="10,37,10,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="26"/>
+        <ProgressBar x:Name="installProgressBar" Height="14" VerticalAlignment="Bottom" Grid.ColumnSpan="2"/>
+        <Button x:Name="buttonAddItem" Content="+" HorizontalAlignment="Right" Margin="0,10,85,0" VerticalAlignment="Top" Width="25" Height="22" Grid.Column="1" Click="buttonAddItem_Click"/>
+        <Button x:Name="buttonEditItem" Content="Edit" HorizontalAlignment="Right" Margin="0,10,40,0" VerticalAlignment="Top" Width="40" Height="22" Grid.Column="1" Click="buttonEditItem_Click"/>
+        <Button x:Name="buttonRemoveItem" Content="-" HorizontalAlignment="Right" Margin="0,10,10,0" VerticalAlignment="Top" Width="25" Height="22" Grid.Column="1" Click="buttonRemoveItem_Click"/>
+        <ComboBox x:Name="itemComboBox" Margin="10,10,118,0" VerticalAlignment="Top" HorizontalContentAlignment="Stretch" Grid.ColumnSpan="2" Height="22" SelectionChanged="itemComboBox_SelectionChanged"/>
+        <ComboBox x:Name="deviceComboBox" Margin="10,93,118,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="22"/>
+        <Button x:Name="buttonRefreshDevice" Content="Refresh" HorizontalAlignment="Right" Margin="0,93,10,0" VerticalAlignment="Top" Width="100" Height="22" Grid.Column="1" Click="buttonRefreshDevice_Click"/>
+        <Button x:Name="buttonUninstall" Content="Uninstall" Margin="5,0,10,24" VerticalAlignment="Bottom" Height="22" Grid.Column="1" Click="buttonUninstall_Click"/>
+        <Button x:Name="buttonLaunch" Content="Launch" Margin="10,0,5,78" VerticalAlignment="Bottom" Height="22" Click="buttonLaunch_Click"/>
+        <Button x:Name="buttonKill" Content="Kill" Margin="5,0,10,78" VerticalAlignment="Bottom" Height="22" HorizontalContentAlignment="Center" Grid.Column="1" Click="buttonKill_Click"/>
+        <Label x:Name="labelBundleId" Content="com.example.bundleid" Margin="10,62,10,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="26"/>
+        <Button x:Name="buttonClearData" Content="Clear Data" Margin="5,0,10,51" VerticalAlignment="Bottom" Height="22" Grid.Column="1" Click="buttonClearData_Click"/>
+    </Grid>
+</Window>
